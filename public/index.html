@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finder.io</title>
+    <script data-ad-client="ca-pub-9211051225405891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="shortcut icon" href="img/image.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ldbtn.min.css">
+    <link rel="stylesheet" href="css/loading.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body onload="alert('Please Open Using Laptop or PC or Tablets for convennient viewing')">
+    <nav class="navbar navbar-expand-lg transparent navbar-inverse">
+      <a class="navbar-brand" href="#">
+          <img src="img/image.png" width="75" height="75" class="d-inline-block align-top mx-2" alt="logo"><span class="heading my-5">Finder</span> 
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="mx-3 my-3"><button class="nav-item clean " onclick="login()">Login</button></li>
+            <li class="mx-3 my-3"><button class="nav-item clear effect" onclick="register()">Sign Up</button></li>
+          </ul>
+      </div>
+  </nav>
+  <div class="main">
+    <div class="row elements d-flex justify-content-center">
+      <h1 class="text-center heading">News</h1>
+    </div>
+    <div class="row elements d-flex justify-content-center">
+      <div class="col-md-3">
+        <select class="form-control" id="sourceSelector"></select>
+      </div>
+    </div>
+    <div class="row elements d-flex justify-content-center" id="data">
+    </div>
+    <div class="row elements d-flex justify-content-left ">
+      <footer class="footer mx-4 my-3"> 
+        <h5>&copy; All rights reserved</h5>
+        <h5>Used <a href="https://newsapi.org/">News API v2</a></h5>
+      </footer>
+    </div>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content loginmodal-container">
+          <h1>Login to Your Account</h1><br>
+          <form>
+            <input type="text" name="user" placeholder="Email" id="email">
+            <input type="password" name="pass" placeholder="Password" id="pass">
+            <input type="checkbox" class="my-2" id="check" onclick="seePassword()"><span class="mx-1 my-2 login-help">Show Password</span>
+            <input type="button" name="login" class="login loginmodal-submit" value="Login" onclick="signIn()">
+          </form>			
+        </div>
+       </div>
+    </div>
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content loginmodal-container">
+          <h1>Sorry</h1><br>
+          <h4 class="text text-center" style="font-size: 15px !important;font-weight:200 !important;">This is an exclusive club.<br>Please leave your email with us. We will contact you for further details</h4>
+          <form id="signup-form">
+            <input type="email" name="email" placeholder="Enter Email ID" id="emailinv" required>
+            <input type="button" name="submit" class="login loginmodal-submit" value="Submit"onclick="signUp()"/>
+          </form>			
+        </div>
+       </div>
+    </div>
+  </div>
+  </body>
+  <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script src="/__/firebase/7.6.1/firebase-database.js"></script>
+  <script src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+  <script src="/__/firebase/7.6.1/firebase-storage.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sweetalert.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/news.js"></script>
+</html>
